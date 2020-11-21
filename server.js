@@ -3,7 +3,7 @@ const https = require('https')
 const path = require('path')
 const fs = require('fs')
 const app = express()
-const port = 8443;
+const port = 8080;
 
 //Static Files
 app.use(express.static(__dirname + '/public'));
@@ -18,7 +18,7 @@ const sslServer = https.createServer({
     cert: fs.readFileSync(__dirname + '/cert/cert.crt')
 }, app)
 
-// listening port to 8443
+// listening port to 8080
 sslServer.listen(port, function(){
     console.log(`Server started on port ${port}`);
 });
