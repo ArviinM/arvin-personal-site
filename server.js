@@ -11,6 +11,6 @@ app.get("/", (req, res) => {
 })
 
 // listening port to 39501
-sslServer.listen(port, function(){
+app.listen(port, function(){
     console.log(`Server started on port ${port}`);
 });
