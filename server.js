@@ -3,7 +3,7 @@ const app = express()
 const port = 39501;
 
 //Static Files
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, '/public')));
 
 //App direct
 app.get("/", (req, res) => {
