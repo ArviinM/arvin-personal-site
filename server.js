@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 39501;
+const {port} = require('./config.json');
 
 //Static Files
 app.use(express.static('public'))
@@ -12,5 +12,5 @@ app.get("/", (req, res) => {
 
 // listening port to 39501
 app.listen(port, function(){
-    console.log(`Server started on port ${port}`);
+    console.log(`Server started 🚀 on port ${port}`);
 });
